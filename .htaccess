@@ -1,0 +1,13 @@
+# в принципе, хватает строки ниже:
+AddDefaultCharset UTF-8
+Order Allow,Deny
+Allow from all
+Deny from 10.10.1.1 
+ErrorDocument 403 /Error_10.10.1.1.php
+         <Files Error_10.10.1.1.php>
+           allow from all
+            </Files>
+
+        
+        
+        
