@@ -92,26 +92,27 @@ $sheet1->getPageMargins()->setTop(0);
 $sheet1->getPageMargins()->setRight(0.4);
 $sheet1->getPageMargins()->setLeft(0.5);
 $sheet1->getPageMargins()->setBottom(0);
-$sheet1->mergeCells('A1:Q1');
+$sheet1->mergeCells('A1:R1');
 
 $sheet1->setCellValue('A1', 'Повторная закачка');
 $sheet1->setCellValue('A2', 'Номер Заказа');
-$sheet1->setCellValue('B2', 'Город офиса заказа');
-$sheet1->setCellValue('C2','Страна');
-$sheet1->setCellValue('D2','Город');
-$sheet1->setCellValue('E2','Тип улицы');
-$sheet1->setCellValue('F2','Название улицы');
-$sheet1->setCellValue('G2','Дом');
-$sheet1->setCellValue('H2','Город офиса Доставки');
-$sheet1->setCellValue('I2','Населенный пункт Получения');
-$sheet1->setCellValue('J2','Дата');
-$sheet1->setCellValue('K2','Время');
-$sheet1->setCellValue('L2','Оплата товара');
-$sheet1->setCellValue('M2','Условия получения');
-$sheet1->setCellValue('N2','Требования к упаковке');
-$sheet1->setCellValue('O2','ДУ СУ');
-$sheet1->setCellValue('P2','Примечание');
-$sheet1->setCellValue('Q2','Вид Услуги');
+$sheet1->setCellValue('B2', 'Дата Закачки');
+$sheet1->setCellValue('C2', 'Город офиса заказа');
+$sheet1->setCellValue('D2','Страна');
+$sheet1->setCellValue('E2','Город');
+$sheet1->setCellValue('F2','Тип улицы');
+$sheet1->setCellValue('G2','Название улицы');
+$sheet1->setCellValue('H2','Дом');
+$sheet1->setCellValue('I2','Город офиса Доставки');
+$sheet1->setCellValue('J2','Населенный пункт Получения');
+$sheet1->setCellValue('K2','Дата');
+$sheet1->setCellValue('L2','Время');
+$sheet1->setCellValue('M2','Оплата товара');
+$sheet1->setCellValue('N2','Условия получения');
+$sheet1->setCellValue('O2','Требования к упаковке');
+$sheet1->setCellValue('P2','ДУ СУ');
+$sheet1->setCellValue('Q2','Примечание');
+$sheet1->setCellValue('R2','Вид Услуги');
 
 $sheet1->getStyle('A1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
  
@@ -132,12 +133,12 @@ $sheet1->getColumnDimension('N')->setAutoSize(true);
 $sheet1->getColumnDimension('O')->setAutoSize(true);
 $sheet1->getColumnDimension('P')->setAutoSize(true); 
 $sheet1->getColumnDimension('P')->setAutoSize(true); 
+$sheet1->getColumnDimension('R')->setAutoSize(true);
 
-
-$sheet1->getStyle('A2:Q2')->getBorders()->getTop()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
-$sheet1->getStyle('A2:Q2')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
-$sheet1->getStyle('A2:Q2')->getBorders()->getLeft()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
-$sheet1->getStyle('A2:Q2')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$sheet1->getStyle('A2:R2')->getBorders()->getTop()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$sheet1->getStyle('A2:R2')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$sheet1->getStyle('A2:R2')->getBorders()->getLeft()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$sheet1->getStyle('A2:R2')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 
 $sheet1->getStyle('A2')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 $sheet1->getStyle('B2')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
@@ -156,8 +157,9 @@ $sheet1->getStyle('N2')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style
 $sheet1->getStyle('O2')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 $sheet1->getStyle('P2')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 $sheet1->getStyle('Q2')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
-$sheet1->getStyle('A1:Q1')->getFont()->setBold(true);
-$sheet1->getStyle('A2:Q2')->getFont()->setBold(true); 
+$sheet1->getStyle('R2')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$sheet1->getStyle('A1:R1')->getFont()->setBold(true);
+$sheet1->getStyle('A2:R2')->getFont()->setBold(true); 
 
 $xls->createSheet();     
 $xls->setActiveSheetIndex(2);
@@ -173,22 +175,22 @@ $sheet2->getPageMargins()->setTop(0);
 $sheet2->getPageMargins()->setRight(0.4);
 $sheet2->getPageMargins()->setLeft(0.5);
 $sheet2->getPageMargins()->setBottom(0);
-$sheet2->mergeCells('A1:L1');
+$sheet2->mergeCells('A1:M1');
 
 $sheet2->setCellValue('A1', 'Повторная закачка');
 $sheet2->setCellValue('A2', 'Номер Накладной');
-$sheet2->setCellValue('B2', 'Дата Отправления');
-$sheet2->setCellValue('C2','Город Отправления');
-$sheet2->setCellValue('D2','Населенный пункт');
-$sheet2->setCellValue('E2','Респ. обл. Край');
-$sheet2->setCellValue('F2','Район');
-$sheet2->setCellValue('G2','Город офиса Доставки');
-$sheet2->setCellValue('H2','Населенный пункт Получения');
-$sheet2->setCellValue('I2','Респ. обл. Край');
-$sheet2->setCellValue('J2','Район');
-$sheet2->setCellValue('K2','Примечание');
-$sheet2->setCellValue('L2','Вид Услуг');
-
+$sheet2->setCellValue('B2', 'Дата Закачки');
+$sheet2->setCellValue('C2', 'Дата Отправления');
+$sheet2->setCellValue('D2','Город Отправления');
+$sheet2->setCellValue('E2','Населенный пункт');
+$sheet2->setCellValue('F2','Респ. обл. Край');
+$sheet2->setCellValue('G2','Район');
+$sheet2->setCellValue('H2','Город офиса Доставки');
+$sheet2->setCellValue('I2','Населенный пункт Получения');
+$sheet2->setCellValue('J2','Респ. обл. Край');
+$sheet2->setCellValue('K2','Район');
+$sheet2->setCellValue('L2','Примечание');
+$sheet2->setCellValue('M2','Вид Услуг');
 
 $sheet2->getStyle('A1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
  
@@ -203,10 +205,9 @@ $sheet2->getColumnDimension('H')->setAutoSize(true);
 $sheet2->getColumnDimension('I')->setAutoSize(true); 
 $sheet2->getColumnDimension('J')->setAutoSize(true);
 $sheet2->getColumnDimension('K')->setAutoSize(true);
-$sheet2->getColumnDimension('L')->setAutoSize(true);  
+$sheet2->getColumnDimension('L')->setAutoSize(true); 
+$sheet2->getColumnDimension('M')->setAutoSize(true); 
 
-
-  
 
 $sheet2->getStyle('A2:L2')->getBorders()->getTop()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 $sheet2->getStyle('A2:L2')->getBorders()->getBottom()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
@@ -225,10 +226,10 @@ $sheet2->getStyle('I2')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style
 $sheet2->getStyle('J2')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 $sheet2->getStyle('K2')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 $sheet2->getStyle('L2')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
+$sheet2->getStyle('M2')->getBorders()->getRight()->setBorderStyle(PHPExcel_Style_Border::BORDER_THIN);
 
-
-$sheet2->getStyle('A1:L1')->getFont()->setBold(true);
-$sheet2->getStyle('A2:L2')->getFont()->setBold(true);
+$sheet2->getStyle('A1:M1')->getFont()->setBold(true);
+$sheet2->getStyle('A2:M2')->getFont()->setBold(true);
 
 
 
@@ -236,26 +237,26 @@ $index=3;
 $index2=3;
 $index3=3;
 $index1=0;
-     $result = mysqli_query($link,  "Select NOW() - Interval 3 day into @t;"); 
+     $result = mysqli_query($link,  "Select NOW() - Interval 1 day into @t;"); 
                                     
      $result = mysqli_query($link, "Select d15_departures.WayBillNum, d15_departures.PickUpCode,
                                     d15_departures.SY_Adding, d00_buff.SY_LastEdit, d15_departures.ToDivID, d15_departures.FromDivID, d00_buff.str04
                                     from d15_departures
                                     left join d00_buff on d00_buff.dXXID=d15_departures.ID
-                                    where UNIX_TIMESTAMP(d00_buff.SY_LastEdit) - UNIX_TIMESTAMP(d15_departures.SY_Adding ) > '3600'
+                                    where UNIX_TIMESTAMP(d00_buff.SY_LastEdit) - UNIX_TIMESTAMP(d15_departures.SY_Adding ) > '86400'
                                     and d00_buff.SY_LastEdit>@t and d15_departures.WayBillNum not like '%!' and d15_departures.SY_Void=0;"); 
                                     
 
               while ($row = mysqli_fetch_array($result, MYSQL_NUM)) 
                   {
                       if ($row[5]=='1')             // Заказы
-                          { $res1 = mysqli_query($link,    "Select d00_buff.str04, d00_buff.str03, d00_buff.str13, d00_buff.str12, d00_buff.str16, 
+                          { $res1 = mysqli_query($link,    "Select d00_buff.str04, d00_buff.SY_Adding, d00_buff.str03, d00_buff.str13, d00_buff.str12, d00_buff.str16, 
                                                            d00_buff.str17, d00_buff.str18, d00_buff.str27, d00_buff.str28, d00_buff.str50, 
                                                            d00_buff.str51, d00_buff.str52, d00_buff.str53, d00_buff.str59, d00_buff.str67, d00_buff.str68 
                                                            from d00_buff where d00_buff.str04='$row[1]';");
                                  while ($row1 = mysqli_fetch_array($res1, MYSQL_NUM)) 
                                  {
-                                             for ($j = 0; $j <= 15; $j++)   {
+                                             for ($j = 0; $j <= 16; $j++)   {
                                              $row1[$j]=iconv("cp1251", "utf-8", $row1[$j]);         
                                                  if ($j!=13) {
                                                               
@@ -268,7 +269,7 @@ $index1=0;
                                    } 
                        elseif ($row[4]=='1' and empty($row[6]))                // Доставки
                                         {
-                                          $res2 = mysqli_query($link, "Select d00_buff.str01, d00_buff.str02, d00_buff.str03,  d00_buff.str07,
+                                          $res2 = mysqli_query($link, "Select d00_buff.str01, d00_buff.SY_Adding, d00_buff.str03,  d00_buff.str07,
                                                                        d00_buff.str27, d00_buff.str28, d00_buff.str29, d00_buff.str30, d00_buff.str33
                                                                        from d00_buff where d00_buff.str01='$row[0]';");
                                  while ($row2 = mysqli_fetch_array($res2, MYSQL_NUM))                        
@@ -284,20 +285,18 @@ $index1=0;
                                               $index2++;
                                         }            
                     
-                  
-      
-                                                                 
+                                                    
                     }  
                       elseif ($row[4]!='1' and $row[5]!='1')    //Транзиты
                     {
-                                          $res3 = mysqli_query($link, "Select d00_buff.str01, d00_buff.str02, d00_buff.str07,  d00_buff.str12, d00_buff.str14, d00_buff.str15,
+                                          $res3 = mysqli_query($link, "Select d00_buff.str01, d00_buff.SY_Adding, d00_buff.str02, d00_buff.str07,  d00_buff.str12, d00_buff.str14, d00_buff.str15,
                                                                        d00_buff.str27, d00_buff.str28, d00_buff.str30, d00_buff.str31, d00_buff.str67, d00_buff.str68
                                                                        from d00_buff where d00_buff.str01='$row[0]';");
                                  while ($row3 = mysqli_fetch_array($res3, MYSQL_NUM))                        
                       
                                  {
                                  
-                                            for ($k = 0; $k <= 11; $k++)   {
+                                            for ($k = 0; $k <= 12; $k++)   {
                                              $row3[$k]=iconv("cp1251", "utf-8", $row3[$k]);         
                                              $sheet2->setCellValueByColumnAndRow($k, $index3, $row3[$k]);
                                                                            }
@@ -306,9 +305,7 @@ $index1=0;
                                               $index3++;
                                  }            
                     
-                  
-      
-                                                                 
+                                    
                     }      
                         
                          $index1++;
@@ -323,9 +320,8 @@ $index1=0;
  header ( "Content-Disposition: attachment; filename=$date.xls" );
  $objWriter = new PHPExcel_Writer_Excel5($xls);
  $objWriter->save("/var/www/files/Upload/$date.xls"); 
- 
- 
-                                           
+$out = shell_exec('echo "См. вложение" | mail -s \'Дважды закаченные заказы доставки транзиты\' -a /var/www/files/Upload/`date +%Y-%m-%d`.xls -r "gsot@corp.ws" smk@dmcorp.ru'); 
+                                      
 
 // Выводим HTTP-заголовки
 
