@@ -103,7 +103,7 @@ $date_by = $_POST['date_by'].' 23:59:59';
     
       $result3 =  mysqli_query($link, "UPDATE d50_vo d50, TMP_Table TMP
                                      SET
-                                     d50.WayBillSumm = CEILING(TMP.WayBillSumm)*TMP.Tarrifs*1.18,
+                                     d50.WayBillSumm = CEILING(TMP.WayBillSumm)*TMP.Tarrifs*1.2,
                                      d50.Sh_Weight = TMP.Sh_Weight, d50.WayBillWeight = TMP.WayBillWeight
                                      WHERE d50.ID = TMP.ID");         
 	if($result1==false or $result2==false or $result3==false)

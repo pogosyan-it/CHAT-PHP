@@ -30,9 +30,12 @@ $q=count($lists[0]);
 for ($i = 0; $i <= $q-1; $i++) 
               
             {  
-                
-               $symb_date  = '.';
-               $date_delim = strpos($lists[0][$i][0], $symb_date);
+               $waybill=$lists[0][$i][1];
+               $sum=$lists[0][$i][2];
+               if (empty($waybill) or empty($sum)) { break; }
+               else { 
+                     $symb_date  = '.';
+                     $date_delim = strpos($lists[0][$i][0], $symb_date);
                if ($date_delim===false) 
                    {
                      $date=explode("/", $lists[0][$i][0])[2].'-'.explode("/", $lists[0][$i][0])[0].'-'.explode("/", $lists[0][$i][0])[1];
@@ -43,8 +46,8 @@ for ($i = 0; $i <= $q-1; $i++)
                       
                       }   
               
-               $sum=$lists[0][$i][2];
-               $waybill=$lists[0][$i][1];
+               
+               
                $find_symb  = '-';
                $pos1 = strpos($lists[0][$i][1], $find_symb);
                
@@ -54,7 +57,7 @@ for ($i = 0; $i <= $q-1; $i++)
                      print_r($i.' '.$lists[0][$i][1].' '.$waybill_new_1."\n");
                      
                      $res=mysqli_query($link, "update d50_vo SET d50_vo.WayBillSumm='$sum' where d50_vo.WayBill like '$waybill_new_1' 
-                                            and d50_vo.lCargoHandedOver >= '$date';");   
+                                              and d50_vo.lCargoHandedOver >= '$date';");   
                      
                      $res=mysqli_query($link, "Select d50_vo.WayBill, d50_vo.lCargoHandedOver, d50_vo.WayBillSumm from d50_vo 
                                                     where d50_vo.WayBill like '$waybill_new_1'");
@@ -87,11 +90,11 @@ for ($i = 0; $i <= $q-1; $i++)
                                   }                          
                       print_r($i.' '.$waybill.'  '.$waybill_new_2.' '.$date.' '.$lists[0][$i][2]."\n");
                     }      
-               
+                   }
             }                    
-$output = shell_exec('rm /var/www/files/Sverki/transport.xls');
+$output = shell_exec('mv /var/www/files/Sverki/transport.xls /var/www/files/Sverki/Done/Transport/transport_"`date \+\%Y_\%m_\%d_\%H_\%M`".xls');
 
-echo shell_exec('bash /home/it/scripts/sverki_rep.sh');  
+#echo shell_exec('bash /home/it/scripts/sverki_rep.sh');  
 fclose($fd);          
 }
 else 

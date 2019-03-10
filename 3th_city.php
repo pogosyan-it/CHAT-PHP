@@ -23,7 +23,11 @@ $size = filesize("/var/www/files/3th_city/$DateOfRequest");
                                     or
                                     Date_Format(d15_departures.PickUpRTime, '%Y-%m-%d')=Date_Format(NOW(), '%Y-%m-%d')  and d15_departures.SY_Void=0 and
                                     SUBSTRING_INDEX(hbc_cities.Name, '(', 1)<>d15_departures.PaymentTXT and d15_departures.FromDivID=1 and 
-                                    d15_departures.SY_OwnDiv=d15_departures.ToDivID");
+                                    d15_departures.SY_OwnDiv=d15_departures.ToDivID
+                                    or
+                                    Date_Format(d15_departures.PickUpRTime, '%Y-%m-%d')=Date_Format(NOW(), '%Y-%m-%d')  and d15_departures.SY_Void=0 and
+                                    SUBSTRING_INDEX(hbc_cities.Name, '(', 1)=d15_departures.PaymentTXT and d15_departures.FromDivID=1 and 
+                                    d15_departures.SY_OwnDiv<>d15_departures.ToDivID");
                   while ($row = mysqli_fetch_array($result, MYSQL_NUM)) 
                   {
                    if ($row[4] !== 'Снят!') {

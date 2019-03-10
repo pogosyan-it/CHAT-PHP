@@ -30,7 +30,11 @@ $q=count($lists[0]);
 for ($i = 1; $i <= $q-1; $i++) 
               
             {  
-                
+               $sum=$lists[0][$i][2];
+               $waybill=iconv("utf-8","cp1251",$lists[0][$i][1]);
+               $waight=$lists[0][$i][3]; 
+               if (empty($waybill) or empty($sum)) { break; }
+               else {  
                $symb_date  = '.';
                $date_delim = strpos($lists[0][$i][0], $symb_date);
                if ($date_delim===false) 
@@ -42,12 +46,10 @@ for ($i = 1; $i <= $q-1; $i++)
                       $date=explode(".", $lists[0][$i][0])[2].'-'.explode(".", $lists[0][$i][0])[1].'-'.explode(".", $lists[0][$i][0])[0];
                       
                       }  
-               $sum=$lists[0][$i][2];
-               $waybill=iconv("utf-8","cp1251",$lists[0][$i][1]);
-               $waight=$lists[0][$i][3]; 
                
-               $res=mysqli_query($link, "Update d50_vo SET d50_vo.WayBillSumm='$sum', d50_vo.EWeightS='$waight' 
-                                                where d50_vo.WayBill='$waybill' and d50_vo.lCargoHandedOver >='$date'");   
+               
+              $res=mysqli_query($link, "Update d50_vo SET d50_vo.WayBillSumm='$sum', d50_vo.EWeightS='$waight' 
+                                               where d50_vo.WayBill='$waybill' and d50_vo.lCargoHandedOver >='$date'");   
                
                $res=mysqli_query($link, "Select d50_vo.WayBill, d50_vo.lCargoHandedOver, d50_vo.WayBillSumm, d50_vo.EWeightS from d50_vo 
                                                     where d50_vo.WayBill='$waybill'");
@@ -66,11 +68,11 @@ for ($i = 1; $i <= $q-1; $i++)
                                      
                                    print_r($i.'  '.$waybill.'   '.$date.'     '.$sum.'     '.$waight."\n");
                
-
+                       }
                }
   fclose($fd); 
-  $out = shell_exec('echo "См. вложение" | mail -s \'Отчеты Байкал\' -a /var/www/files/Sverki/Reports/Baikal/`date +%Y-%m-%d`_Baikal.txt -r "gsot@corp.ws" it@int.dmcorp.ru'); 
-  $out = shell_exec('echo "См. вложение" | mail -s \'Отчеты Байкал\' -a /var/www/files/Sverki/Reports/Baikal/`date +%Y-%m-%d`_Baikal.txt -r "gsot@corp.ws" gsverki@dmcorp.ru');
-  $output = shell_exec('rm /var/www/files/Sverki/Tariff.xls');
+  #$out = shell_exec('echo "См. вложение" | mail -s \'Отчеты Байкал\' -a /var/www/files/Sverki/Reports/Baikal/`date +%Y-%m-%d`_Baikal.txt -r "gsot@corp.ws" it@int.dmcorp.ru'); 
+  #$out = shell_exec('echo "См. вложение" | mail -s \'Отчеты Байкал\' -a /var/www/files/Sverki/Reports/Baikal/`date +%Y-%m-%d`_Baikal.txt -r "gsot@corp.ws" gsverki@dmcorp.ru');
+  $output = shell_exec('mv /var/www/files/Sverki/Tariff.xls /var/www/files/Sverki/Done/Baikal/Baikal_"`date \+\%Y_\%m_\%d_\%H_\%M`".xls');
    }
 ?>

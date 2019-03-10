@@ -188,7 +188,7 @@ if (!$proverka) {
     else         { 
                    echo "<h2 style=\"color:red;\">Произошла ошибка при создании заявки</h2>";}
                  }
- if ($Login=='Pogosyan' or $Login=='Admin' or $Login=='Veklich' or $Login=='Pahomova' or $Login=='Shipovskii')
+ if ($Login=='Pogosyan' or $Login=='Admin' or $Login=='Shalganova' or $Login=='Pahomova' or $Login=='Iskandyarova')
                  {
 ?>
     <h3><div align="center" >Статистика по картриджам</div></h3>

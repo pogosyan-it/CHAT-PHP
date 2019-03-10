@@ -321,7 +321,7 @@ $index1=0;
  $objWriter = new PHPExcel_Writer_Excel5($xls);
  $objWriter->save("/var/www/files/Upload/$date.xls"); 
 $out = shell_exec('echo "См. вложение" | mail -s \'Дважды закаченные заказы доставки транзиты\' -a /var/www/files/Upload/`date +%Y-%m-%d`.xls -r "gsot@corp.ws" smk@dmcorp.ru'); 
-                                      
+$out = shell_exec('echo "См. вложение" | mail -s \'Дважды закаченные заказы доставки транзиты\' -a /var/www/files/Upload/`date +%Y-%m-%d`.xls -r "gsot@corp.ws" boss-iao@dmcorp.ru');                                      
 
 // Выводим HTTP-заголовки
 
