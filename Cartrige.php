@@ -174,7 +174,7 @@ fclose($fd);
                
               echo exec(sprintf("LANG=ru_RU.utf8; mail -s '$tema' -r '$mail' it@int.dmcorp.ru < /var/www/'$Login'", escapeshellarg($Login)), $hzchtoeto, $proverka); 
               echo exec(sprintf("LANG=ru_RU.utf8; cat /var/www/'$Login' | head -n 4 | mail -s '$tema' -r '$mail' finkontrol@dmcorp.ru", escapeshellarg($Login)));
-              echo exec(sprintf("LANG=ru_RU.utf8; cat /var/www/'$Login' | head -n 5 | mail -s '$tema' -r '$mail' client@dmcorp.ru", escapeshellarg($Login)));
+              #echo exec(sprintf("LANG=ru_RU.utf8; cat /var/www/'$Login' | head -n 5 | mail -s '$tema' -r '$mail' client@dmcorp.ru", escapeshellarg($Login)));
 unlink("$Login");
 if (!$proverka) {
    echo "<h2 style=\"color:green;\">Заявка на картридж успешно отправлена в IT отдел!</h2>";

@@ -15,7 +15,7 @@ $size = filesize("/var/www/files/Tranzity/$DateOfRequest");
 
     $result = mysqli_query($link,  "Select d15_departures.WayBillNum, d15_departures.SY_Adding,   d15_departures.ID, 
                                     a.Name as 'dest_adr', b.Name as 'dest_region', hbc_rChange.Region_abr, d00_buff.str67, d00_buff.str0F
-                                     from d15_departures 
+                                    from d15_departures 
                                     left join hbc_cities on hbc_cities.ID=d15_departures.R_CityID
                                     left join hbc_divisions a on a.CityID=hbc_cities.ID
                                     left join hbc_divisions b on d15_departures.ToDivID=b.ID	

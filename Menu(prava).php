@@ -1,70 +1,70 @@
  <?php  
 //  Удаление организации в регионе
-$Del86=array('Pogosyan', 'Admin', 'Lychkin', 'Iskandyarova',  'Golceva');
+$Del86=array('Pogosyan', 'Admin', 'Lychkin', 'Iskandyarova',  'Golceva', 'Krypp' );
 //  Создание пользователя "Старший смены/Кладовщик"
-$sklad=array('Pogosyan', 'Admin', 'Pahomova', 'Evmenova', 'Dyksin', 'Iskandyarova', 'Sergeenko'); 
+$sklad=array('Pogosyan', 'Admin', 'Pahomova', 'Evmenova', 'Dyksin', 'Iskandyarova', 'Sergeenko', 'Krypp'); 
 //  Прогон по зонам
-$Zone=array('Pogosyan', 'Admin', 'Strejeleckii', 'Matveev', 'Iskandyarova', 'Oneshko');  
+$Zone=array('Pogosyan', 'Admin', 'Strejeleckii', 'Matveev', 'Iskandyarova', 'Oneshko', 'Krypp');  
 //  Принятые накладные выбранным сотрудником
-$WaybillScan=array('Pogosyan', 'Admin', 'Yarovoi', 'Shalganova', 'Ilin', 'Iskandyarova', 'Bylkin'); 
+$WaybillScan=array('Pogosyan', 'Admin', 'Yarovoi', 'Shalganova', 'Ilin', 'Iskandyarova', 'Bylkin', 'Krypp'); 
 //  ЧЛ
-$Chl=array('Pogosyan', 'Admin', 'Saltykov', 'Iskandyarova', 'A.A. Andreev');   
+$Chl=array('Pogosyan', 'Admin', 'Saltykov', 'Iskandyarova', 'A.A. Andreev', 'Krypp');   
 //  Очистка региона
-$DELd86Reg=array('Pogosyan', 'Admin', 'Lychkin', 'Iskandyarova', 'Golceva');     
+$DELd86Reg=array('Pogosyan', 'Admin', 'Lychkin', 'Iskandyarova', 'Golceva', 'Krypp');     
 //  Создание пользователя "Курьер/Автокурьер"
-$kurier=array('Pogosyan', 'Admin', 'Pahomova', 'Evmenova', 'Dyksin', 'Iskandyarova', 'Sergeenko');  
+$kurier=array('Pogosyan', 'Admin', 'Pahomova', 'Evmenova', 'Dyksin', 'Iskandyarova', 'Sergeenko', 'Krypp');  
 //  Прогон ВП
-$VP=array('Pogosyan', 'Admin', 'Strejeleckii', 'Matveev', 'Iskandyarova', 'Oneshko');
+$VP=array('Pogosyan', 'Admin', 'Strejeleckii', 'Matveev', 'Iskandyarova', 'Oneshko', 'Krypp');
 //  Сканирование и закрытие накладной
-$Waybill=array('Pogosyan', 'Admin', 'Shalganova', 'Yarovoi', 'Iskandyarova', 'A.A. Andreev', 'Ilin', 'Klopova', 'Bylkin'); 
+$Waybill=array('Pogosyan', 'Admin', 'Shalganova', 'Yarovoi', 'Iskandyarova', 'A.A. Andreev', 'Ilin', 'Klopova', 'Bylkin', 'Krypp'); 
 //  Сроки исполнения работ
-$order_deliver=array('Pogosyan', 'Admin', 'Iskandyarova', 'A.A. Andreev','Lychkin','Golceva' );
+$order_deliver=array('Pogosyan', 'Admin', 'Iskandyarova', 'A.A. Andreev','Lychkin','Golceva', 'Krypp' );
 //  Добавление адреса в справочник
-$HouseADD=array('Pogosyan', 'Admin', 'Iskandyarova');
+$HouseADD=array('Pogosyan', 'Admin', 'Iskandyarova', 'Krypp');
 //  Создание пользователя "Менеджер/Логист/Специалист"
-$CreateIAO=array('Pogosyan', 'Admin', 'Pahomova', 'Evmenova', 'Dyksin', 'Iskandyarova', 'Sergeenko');
+$CreateIAO=array('Pogosyan', 'Admin', 'Pahomova', 'Evmenova', 'Dyksin', 'Iskandyarova', 'Sergeenko', 'Krypp');
 //  Перевозчик
-$Carrier=array('Pogosyan', 'Admin', 'Strejeleckii', 'Matveev', 'Iskandyarova', 'Oneshko'); 
+$Carrier=array('Pogosyan', 'Admin', 'Strejeleckii', 'Matveev', 'Iskandyarova', 'Oneshko', 'Krypp'); 
 //  Сканирование накладных в манифесте
-$ScanMan=array('Pogosyan', 'Admin', 'Shalganova', 'Yarovoi', 'Iskandyarova', 'A.A. Andreev', 'Ilin', 'Klopova', 'Bylkin'); 
+$ScanMan=array('Pogosyan', 'Admin', 'Shalganova', 'Yarovoi', 'Iskandyarova', 'A.A. Andreev', 'Ilin', 'Klopova', 'Bylkin', 'Krypp'); 
 //  Добавление населенного пункта
-$CityADD=array('Pogosyan', 'Admin', 'Iskandyarova');
+$CityADD=array('Pogosyan', 'Admin', 'Iskandyarova', 'Krypp');
 // Создание пользователя "Финансовая служба"
-$Fin=array('Pogosyan', 'Admin', 'Pahomova', 'Evmenova', 'Dyksin', 'Iskandyarova', 'Sergeenko');
+$Fin=array('Pogosyan', 'Admin', 'Pahomova', 'Evmenova', 'Dyksin', 'Iskandyarova', 'Sergeenko', 'Krypp');
 //  Информация по накладной
-$waybill=array('Pogosyan', 'Admin', 'Shalganova', 'Bylkin', 'Klopova', 'Iskandyarova', 'Balukova', 'A.A. Andreev','Yarovoi', 'Ilin');
+$waybill=array('Pogosyan', 'Admin', 'Shalganova', 'Bylkin', 'Klopova', 'Iskandyarova', 'Balukova', 'A.A. Andreev','Yarovoi', 'Ilin', 'Krypp');
 //  Изменение НП РФ
-$CityChange=array('Pogosyan', 'Admin', 'Iskandyarova', 'Shalganova'); 
+$CityChange=array('Pogosyan', 'Admin', 'Iskandyarova', 'Shalganova', 'Krypp'); 
 //  Создание пользователя "Служба по развитию персонала"
-$Kadry=array('Pogosyan', 'Admin', 'Pahomova', 'Evmenova', 'Dyksin', 'Jilkina', 'Iskandyarova', 'A.A. Andreev', 'Sergeenko');
+$Kadry=array('Pogosyan', 'Admin', 'Pahomova', 'Evmenova', 'Dyksin', 'Jilkina', 'Iskandyarova', 'A.A. Andreev', 'Sergeenko', 'Krypp');
 //  Информация по удалению и переименованию накладной
-$waybill_del=array('Pogosyan', 'Admin',  'Bylkin', 'Iskandyarova', 'Lychkin', 'A.A. Andreev', 'Seredenko', 'Shalganova', 'Yarovoi', 'Ilin', 'Golceva', 'Balukova', 'Klopova',);
+$waybill_del=array('Pogosyan', 'Admin',  'Bylkin', 'Iskandyarova', 'Lychkin', 'A.A. Andreev', 'Seredenko', 'Shalganova', 'Yarovoi', 'Ilin', 'Golceva', 'Balukova', 'Klopova', 'Krypp');
 //  Добавление или Изменение адреса в ВП
-$SmenaAdresaVP1=array('Pogosyan', 'Admin',  'Iskandyarova', 'A.A. Andreev', 'Lychkin', 'Golceva', 'Shalganova');            
+$SmenaAdresaVP1=array('Pogosyan', 'Admin',  'Iskandyarova', 'A.A. Andreev', 'Lychkin', 'Golceva', 'Shalganova', 'Krypp');            
 //  Изменение пароля пользователя
-$parol=array('Pogosyan', 'Admin', 'Pahomova', 'Evmenova', 'Dyksin', 'Iskandyarova', 'A.A. Andreev', 'Sergeenko');
+$parol=array('Pogosyan', 'Admin', 'Pahomova', 'Evmenova', 'Dyksin', 'Iskandyarova', 'A.A. Andreev', 'Sergeenko', 'Krypp');
 //  Указание областной принадлежности НП
-$SmenaPrivjazki=array('Pogosyan', 'Admin', 'Iskandyarova', 'Lychkin', 'A.A. Andreev', 'Golceva');
+$SmenaPrivjazki=array('Pogosyan', 'Admin', 'Iskandyarova', 'Lychkin', 'A.A. Andreev', 'Golceva', 'Krypp');
 //  Изменение прав доступа (увольнение)
-$smena_prav=array('Pogosyan', 'Admin', 'Pahomova', 'Evmenova', 'Dyksin', 'Iskandyarova', 'A.A. Andreev', 'Sergeenko');
+$smena_prav=array('Pogosyan', 'Admin', 'Pahomova', 'Evmenova', 'Dyksin', 'Iskandyarova', 'A.A. Andreev', 'Sergeenko', 'Krypp');
 //  Схема отправок
-$ABR_Change=array('Pogosyan', 'Admin', 'Iskandyarova', 'A.A. Andreev', 'Lychkin', 'Golceva');
+$ABR_Change=array('Pogosyan', 'Admin', 'Iskandyarova', 'A.A. Andreev', 'Lychkin', 'Golceva', 'Krypp');
 //  Проверка наличия заказа в базе
-$order_check=array('Pogosyan', 'Admin', 'Iskandyarova', 'A.A. Andreev', 'Lychkin', 'Golceva','Haustov','Akopyan', 'Goloskokova', 'Droshnev', 'Akopyan', 'Haustov');
+$order_check=array('Pogosyan', 'Admin', 'Iskandyarova', 'A.A. Andreev', 'Lychkin', 'Golceva','Haustov','Akopyan', 'Goloskokova', 'Droshnev', 'Akopyan', 'Haustov', 'Krypp');
 //  Лично в руки
-$LVR=array('Pogosyan', 'Admin', 'Iskandyarova', 'A.A. Andreev', 'Saltykov', 'Seredenko');
+$LVR=array('Pogosyan', 'Admin', 'Iskandyarova', 'A.A. Andreev', 'Saltykov', 'Seredenko', 'Krypp');
 //  Смена базы
-$BaseChange=array('Pogosyan', 'Admin', 'Iskandyarova', 'Shalganova', 'Klopova', 'Slepinina', 'Seredenko');
+$BaseChange=array('Pogosyan', 'Admin', 'Iskandyarova', 'Shalganova', 'Klopova', 'Slepinina', 'Seredenko', 'Krypp');
 //  hb_employeeIAO Отчет "операторы БД" 
-$hb_employeeIAO=array('Pogosyan', 'Admin', 'Iskandyarova', 'Shalganova', 'Golceva', 'Klopova', 'Lychkin');
+$hb_employeeIAO=array('Pogosyan', 'Admin', 'Iskandyarova', 'Shalganova', 'Golceva', 'Klopova', 'Lychkin', 'Krypp');
 //  Переадресация (Сверки)
-$sverki_redirect=array('Pogosyan', 'Admin', 'Iskandyarova', 'Matveev', 'Strejeleckii', 'Oneshko');
+$sverki_redirect=array('Pogosyan', 'Admin', 'Iskandyarova', 'Matveev', 'Strejeleckii', 'Oneshko', 'Krypp');
 //  Отчёт по реализации услуг
-$NORK_zakazy=array('Pogosyan', 'Admin', 'Iskandyarova', 'Shalganova', 'MelnikovSM', 'Tymanov', 'EfremovDA', 'Yarovoi', 'Azhahov', 'Matveev', 'Oneshko', 'NovikovaEN', 'Strejeleckii');
+$NORK_zakazy=array('Pogosyan', 'Admin', 'Iskandyarova', 'Shalganova', 'MelnikovSM', 'Tymanov', 'EfremovDA', 'Yarovoi', 'Azhahov', 'Matveev', 'Oneshko', 'NovikovaEN', 'Strejeleckii', 'Krypp', 'Goloskokova');
 // МТО
-$mto=array('Pogosyan', 'Admin', 'Iskandyarova', 'Mamtaliev');
+$mto=array('Pogosyan', 'Admin', 'Iskandyarova', 'Mamtaliev', 'Krypp');
 //Некорректные организации
-$IncorrectClients=array('Pogosyan', 'Admin', 'Iskandyarova', 'Golceva', 'Shalganova');
+$IncorrectClients=array('Pogosyan', 'Admin', 'Iskandyarova', 'Golceva', 'Shalganova', 'Krypp');
   
 $IPopen=array('10.10.1.15', '10.10.1.16', '10.10.1.18', '10.10.1.176', '10.10.1.31', '10.10.1.54', '10.10.1.169', '10.10.1.130', '10.10.1.71', '10.10.1.98');  
  

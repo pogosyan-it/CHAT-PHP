@@ -34,7 +34,7 @@ $size = filesize("/var/www/files/3th_city/$DateOfRequest");
                    
                    if  ($row[1] !== 'КОРП' )    {fwrite($fd, iconv("cp1251", "utf-8", $row[0].'            ' .$row[3]."\r\n"));  }
                                               #{fwrite($fd, iconv("cp1251", "utf-8", $row[0]."\r\n")); }
-                  elseif ($row[1] == 'КОРП' and $row[2] !== 'Москва') {fwrite($fd, iconv("cp1251", "utf-8", $row[0].'            ' .$row[3]."\r\n")); } 
+                   elseif ($row[1] == 'КОРП' and $row[2] !== 'Москва') {fwrite($fd, iconv("cp1251", "utf-8", $row[0].'            ' .$row[3]."\r\n")); } 
                                                                        # {fwrite($fd, iconv("cp1251", "utf-8", $row[0]."\r\n")); } 
                                                  
                                            }
